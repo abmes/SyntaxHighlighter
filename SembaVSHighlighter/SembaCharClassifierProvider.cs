@@ -6,7 +6,7 @@ using System.ComponentModel.Composition;
 namespace SembaVSHighlighter
 {
     [Export(typeof(IClassifierProvider))]
-    [ContentType("text")]
+    [ContentType("CSharp")]
     internal class SembaCharClassifierProvider : IClassifierProvider
     {
         [Import]
