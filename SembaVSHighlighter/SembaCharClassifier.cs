@@ -13,7 +13,7 @@ namespace SembaVSHighlighter
         {
             typeChars.Add(registry.GetClassificationType("SembaBraceFormat"), new char[] { '{', '}' });
             typeChars.Add(registry.GetClassificationType("SembaBracketFormat"), new char[] { '[', ']' });
-            typeChars.Add(registry.GetClassificationType("SembaParenthesesFormat"), new char[] { '(', ')' });
+            typeChars.Add(registry.GetClassificationType("SembaParenthesisFormat"), new char[] { '(', ')' });
             typeChars.Add(registry.GetClassificationType("SembaDelimiterFormat"), new char[] { ':', ';', ',' });
         }
 

@@ -5,15 +5,15 @@ using Microsoft.VisualStudio.Utilities;
 namespace SembaVSHighlighter.SembaFormats
 {
     [Export(typeof(EditorFormatDefinition))]
-    [ClassificationType(ClassificationTypeNames = "SembaParenthesesFormat")]
-    [Name("SembaParenthesesFormat")]
+    [ClassificationType(ClassificationTypeNames = "SembaParenthesisFormat")]
+    [Name("SembaParenthesisFormat")]
     [UserVisible(true)]
     [Order(Before = Priority.Low)]
-    internal sealed class SembaParenthesesFormat : ClassificationFormatDefinition
+    internal sealed class SembaParenthesisFormat : ClassificationFormatDefinition
     {
-        public SembaParenthesesFormat()
+        public SembaParenthesisFormat()
         {
-            this.DisplayName = "Semba C# Parentheses";
+            this.DisplayName = "Semba C# Parenthesis";
         }
     }
 }

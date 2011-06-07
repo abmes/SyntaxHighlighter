@@ -15,8 +15,8 @@ namespace SembaVSHighlighter
         internal static ClassificationTypeDefinition SembaBracketType = null;
 
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("SembaParenthesesFormat")]
-        internal static ClassificationTypeDefinition SembaParenthesesType = null;
+        [Name("SembaParenthesisFormat")]
+        internal static ClassificationTypeDefinition SembaParenthesisType = null;
 
         [Export(typeof(ClassificationTypeDefinition))]
         [Name("SembaDelimiterFormat")]

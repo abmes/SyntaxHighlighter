@@ -66,7 +66,7 @@
     <Compile Include="SembaFormats\SembaBraceFormat.cs" />
     <Compile Include="SembaFormats\SembaBracketFormat.cs" />
     <Compile Include="SembaFormats\SembaDelimiterFormat.cs" />
-    <Compile Include="SembaFormats\SembaParenthesesFormat.cs" />
+    <Compile Include="SembaFormats\SembaParenthesisFormat.cs" />
     <Compile Include="SembaCharClassifier.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
