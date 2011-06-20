@@ -8,7 +8,8 @@ namespace SembaVSHighlighter.SembaFormats
     [ClassificationType(ClassificationTypeNames = "SembaBracketFormat")]
     [Name("SembaBracketFormat")]
     [UserVisible(true)]
-    [Order(Before = Priority.Low)]
+    [Order(Before = "Comment")]
+    [Order(Before = "String")]
     internal sealed class SembaBracketFormat : ClassificationFormatDefinition
     {
         public SembaBracketFormat()

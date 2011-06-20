@@ -8,7 +8,8 @@ namespace SembaVSHighlighter.SembaFormats
     [ClassificationType(ClassificationTypeNames = "SembaParenthesisFormat")]
     [Name("SembaParenthesisFormat")]
     [UserVisible(true)]
-    [Order(Before = Priority.Low)]
+    [Order(Before = "Comment")]
+    [Order(Before = "String")]
     internal sealed class SembaParenthesisFormat : ClassificationFormatDefinition
     {
         public SembaParenthesisFormat()

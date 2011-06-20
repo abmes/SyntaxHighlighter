@@ -8,7 +8,8 @@ namespace SembaVSHighlighter.SembaFormats
     [ClassificationType(ClassificationTypeNames = "SembaDelimiterFormat")]
     [Name("SembaDelimiterFormat")]
     [UserVisible(true)]
-    [Order(Before = Priority.Low)]
+    [Order(Before = "Comment")]
+    [Order(Before = "String")]
     internal sealed class SembaDelimiterFormat : ClassificationFormatDefinition
     {
         public SembaDelimiterFormat()
