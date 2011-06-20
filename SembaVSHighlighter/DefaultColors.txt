@@ -1,6 +1,7 @@
 ﻿Operator = Red
 String = Green
-Comment = Olive
+Comment = Gray
+Number = Navy
 Semba Brace = Blue
 Semba Bracket = Red
 Semba Parentheses = Red
