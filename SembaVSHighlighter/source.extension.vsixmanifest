@@ -7,11 +7,14 @@
     <Description xml:space="preserve">Adds classification types for Brackets, Braces, Parentheses and Delimiters.</Description>
     <Locale>1033</Locale>
     <SupportedProducts>
-      <VisualStudio Version="10.0">
-        <Edition>Pro</Edition>
+      <VisualStudio Version="11.0">
+        <Edition>Ultimate</Edition>
+      </VisualStudio>
+      <VisualStudio Version="11.0">
+        <Edition>Premium</Edition>
       </VisualStudio>
     </SupportedProducts>
-    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0" />
+    <SupportedFrameworkRuntimeEdition MinVersion="4.5" MaxVersion="4.5" />
   </Identifier>
   <References />
   <Content>
