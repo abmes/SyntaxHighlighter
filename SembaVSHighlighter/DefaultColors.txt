@@ -2,7 +2,9 @@
 String = Green
 Comment = Gray
 Number = Navy
-Semba Brace = Blue
-Semba Bracket = Red
-Semba Parentheses = Red
-Semba Delimiter = Red
+Preprocessor Keyword = Olive
+C# Brace (Semba) = Blue
+C# Bracket (Semba) = Red
+C# Parentheses (Semba) = Red
+C# Delimiter (Semba) = Red
+C# Namespace (Semba) = R: 120, G: 10, B: 170

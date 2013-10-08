@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.Utilities;
 using System.ComponentModel.Composition;
 
-namespace SembaVSHighlighter
+namespace SembaVSHighlighter.SembaCharClassifier
 {
     internal static class SembaCharTypes
     {

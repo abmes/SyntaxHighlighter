@@ -1,0 +1,7 @@
+1. Ensure Visual Studio is not running
+
+2. Install SembaVSHighlighter.vsix
+
+3. Start Visual Studio
+
+4. Tools -> Options -> Environment -> Fonts and Colors -> Set the colors according to DefaultColors.txt

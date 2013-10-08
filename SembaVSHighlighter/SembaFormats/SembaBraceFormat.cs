@@ -14,7 +14,7 @@ namespace SembaVSHighlighter.SembaFormats
     {
         public SembaBraceFormat()
         {
-            this.DisplayName = "Semba C# Brace";
+            DisplayName = "C# Brace (Semba)";
         }
     }
 }

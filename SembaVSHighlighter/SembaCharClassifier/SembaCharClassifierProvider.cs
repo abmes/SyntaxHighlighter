@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.Text.Classification;
 using Microsoft.VisualStudio.Utilities;
 using System.ComponentModel.Composition;
 
-namespace SembaVSHighlighter
+namespace SembaVSHighlighter.SembaCharClassifier
 {
     [Export(typeof(IClassifierProvider))]
     [ContentType("CSharp")]

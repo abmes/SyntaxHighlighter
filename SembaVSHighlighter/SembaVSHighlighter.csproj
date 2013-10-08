@@ -86,14 +86,18 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SembaCharClassifierProvider.cs" />
-    <Compile Include="SembaCharTypes.cs" />
+    <Compile Include="SembaCharClassifier\SembaCharClassifierProvider.cs" />
+    <Compile Include="SembaCharClassifier\SembaCharTypes.cs" />
     <Compile Include="SembaFormats\SembaBraceFormat.cs" />
     <Compile Include="SembaFormats\SembaBracketFormat.cs" />
     <Compile Include="SembaFormats\SembaDelimiterFormat.cs" />
+    <Compile Include="SembaFormats\SembaNamespaceFormat.cs" />
     <Compile Include="SembaFormats\SembaParenthesisFormat.cs" />
-    <Compile Include="SembaCharClassifier.cs" />
+    <Compile Include="SembaCharClassifier\SembaCharClassifier.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SembaNamespaceClassifier\SembaNamespaceClassifier.cs" />
+    <Compile Include="SembaNamespaceClassifier\SembaNamespaceType.cs" />
+    <Compile Include="SembaNamespaceClassifier\SembaNamespaceClassifierProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="source.extension.vsixmanifest">
@@ -102,6 +106,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DefaultColors.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InstallProcedure.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

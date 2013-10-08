@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.VisualStudio.Text;
 using Microsoft.VisualStudio.Text.Classification;
 
-namespace SembaVSHighlighter
+namespace SembaVSHighlighter.SembaCharClassifier
 {
     class SembaCharClassifier : IClassifier
     {
