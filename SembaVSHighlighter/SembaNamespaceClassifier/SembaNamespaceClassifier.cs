@@ -68,11 +68,11 @@ namespace SembaVSHighlighter.SembaNamespaceClassifier
             return GetNextIndexWhile(line, startIndex, x => IsIdentifierChar(x));
         }
 
-        private void AddNamespaceAfterKeywordClassificationSpans(ICollection<ClassificationSpan> classifications, SnapshotSpan span, string keyword)
+        private void AddNamespaceAfterKeywordClassificationSpans(ICollection<ClassificationSpan> classifications, SnapshotSpan span, string keyword, Func<string, bool> acceptLineFunc)
         {
             string line = span.GetText();
 
-            if (line.Trim().StartsWith(keyword))
+            if (line.Trim().StartsWith(keyword) && acceptLineFunc(line))
             {
                 int keywordStartIndex = line.IndexOf(keyword);
                 int keywordEndIndex = GetNextDelimiterIndex(line, keywordStartIndex);
@@ -129,8 +129,8 @@ namespace SembaVSHighlighter.SembaNamespaceClassifier
                 _isAlreadyClassifying = true;
                 try
                 {
-                    AddNamespaceAfterKeywordClassificationSpans(classifications, span, "using");
-                    AddNamespaceAfterKeywordClassificationSpans(classifications, span, "namespace");
+                    AddNamespaceAfterKeywordClassificationSpans(classifications, span, "using", line => !line.Contains('('));
+                    AddNamespaceAfterKeywordClassificationSpans(classifications, span, "namespace", line => true);
                     AddNamespaceBeforeTypeClassificationSpans(classifications, span);
                 }
                 finally
