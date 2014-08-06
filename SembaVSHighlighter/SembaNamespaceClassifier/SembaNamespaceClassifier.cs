@@ -7,21 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.CodeDom;
+using SembaVSHighlighter.Common;
 
 namespace SembaVSHighlighter.SembaNamespaceClassifier
 {
-    class SembaNamespaceClassifier : IClassifier
+    class SembaNamespaceClassifier : SembaClassifier
     {
-        private static bool _isAlreadyClassifying;
-
         private readonly IClassificationType SembaNamespaceClassificationType;
-        private readonly IClassifierAggregatorService ClassifierAggregatorService;
         private readonly char[] DelimiterChars;
-        
-        internal SembaNamespaceClassifier(IClassificationTypeRegistryService registry, IClassifierAggregatorService classifierAggregatorService)
+
+        internal SembaNamespaceClassifier(IClassificationTypeRegistryService classificationTypeRegistryService, IClassifierAggregatorService classifierAggregatorService)
+            : base (classificationTypeRegistryService, classifierAggregatorService)
         {
-            SembaNamespaceClassificationType = registry.GetClassificationType("SembaNamespaceFormat");
-            ClassifierAggregatorService = classifierAggregatorService;
+            SembaNamespaceClassificationType = classificationTypeRegistryService.GetClassificationType("SembaNamespaceFormat");
             DelimiterChars = GetDelimiterChars();
         }
 
@@ -84,7 +82,8 @@ namespace SembaVSHighlighter.SembaNamespaceClassifier
                     while (namespaceStartIndex < line.Length)
                     {
                         int namespaceEndIndex = GetNextDelimiterIndex(line, namespaceStartIndex);
-                        classifications.Add(GetClassificationSpan(span, namespaceStartIndex, namespaceEndIndex - namespaceStartIndex, SembaNamespaceClassificationType));
+                        var classificationSpan = GetClassificationSpan(span, namespaceStartIndex, namespaceEndIndex - namespaceStartIndex, SembaNamespaceClassificationType); 
+                        AddToClassificationsIfNotInsideVerbatim(classificationSpan, classifications, span);
                         namespaceStartIndex = GetNextIdentifierIndex(line, namespaceEndIndex);
                     }
                 }
@@ -94,8 +93,8 @@ namespace SembaVSHighlighter.SembaNamespaceClassifier
         private void AddNamespaceBeforeTypeClassificationSpans(ICollection<ClassificationSpan> classifications, SnapshotSpan span)
         {
             string line = span.GetText();
-            
-            var classifier = ClassifierAggregatorService.GetClassifier(span.Snapshot.TextBuffer);
+
+            var classifier = _classifierAggregatorService.GetClassifier(span.Snapshot.TextBuffer);
             foreach (var classificationSpan in classifier.GetClassificationSpans(span))
             {
                 if (classificationSpan.ClassificationType.IsOfType("User Types") ||
@@ -113,37 +112,19 @@ namespace SembaVSHighlighter.SembaNamespaceClassifier
                     while ((prevDelimiterIndex >= 0) && (line[prevDelimiterIndex] == '.'))
                     {
                         int nextDelimiterIndex = line.LastIndexOfAny(DelimiterChars, prevDelimiterIndex - 1);
-                        classifications.Add(GetClassificationSpan(span, nextDelimiterIndex + 1, prevDelimiterIndex - nextDelimiterIndex - 1, SembaNamespaceClassificationType));
+                        var namespaceClassificationSpan = GetClassificationSpan(span, nextDelimiterIndex + 1, prevDelimiterIndex - nextDelimiterIndex - 1, SembaNamespaceClassificationType);
+                        AddToClassificationsIfNotInsideVerbatim(namespaceClassificationSpan, classifications, span);
                         prevDelimiterIndex = nextDelimiterIndex;
                     }
                 }
             }
         }
 
-        public IList<ClassificationSpan> GetClassificationSpans(SnapshotSpan span)
+        protected override void AddClassifications(ICollection<ClassificationSpan> classifications, SnapshotSpan span)
         {
-            List<ClassificationSpan> classifications = new List<ClassificationSpan>();
-
-            if (!_isAlreadyClassifying)
-            {
-                _isAlreadyClassifying = true;
-                try
-                {
-                    AddNamespaceAfterKeywordClassificationSpans(classifications, span, "using", line => !line.Contains('('));
-                    AddNamespaceAfterKeywordClassificationSpans(classifications, span, "namespace", line => true);
-                    AddNamespaceBeforeTypeClassificationSpans(classifications, span);
-                }
-                finally
-                {
-                    _isAlreadyClassifying = false;
-                }
-            }
-
-            return classifications;
+            AddNamespaceAfterKeywordClassificationSpans(classifications, span, "using", line => !line.Contains('('));
+            AddNamespaceAfterKeywordClassificationSpans(classifications, span, "namespace", line => true);
+            AddNamespaceBeforeTypeClassificationSpans(classifications, span);
         }
-
-        #pragma warning disable 67
-        public event EventHandler<ClassificationChangedEventArgs> ClassificationChanged;
-        #pragma warning restore 67
     }
 }

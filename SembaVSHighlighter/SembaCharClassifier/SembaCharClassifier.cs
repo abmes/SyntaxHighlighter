@@ -1,20 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.VisualStudio.Text;
 using Microsoft.VisualStudio.Text.Classification;
+using SembaVSHighlighter.Common;
 
 namespace SembaVSHighlighter.SembaCharClassifier
 {
-    class SembaCharClassifier : IClassifier
+    class SembaCharClassifier : SembaClassifier
     {
         Dictionary<IClassificationType, char[]> typeChars = new Dictionary<IClassificationType, char[]>();
 
-        internal SembaCharClassifier(IClassificationTypeRegistryService registry)
+        internal SembaCharClassifier(IClassificationTypeRegistryService classificationTypeRegistryService, IClassifierAggregatorService classifierAggregatorService)
+            : base(classificationTypeRegistryService, classifierAggregatorService)
         {
-            typeChars.Add(registry.GetClassificationType("SembaBraceFormat"), new char[] { '{', '}' });
-            typeChars.Add(registry.GetClassificationType("SembaBracketFormat"), new char[] { '[', ']' });
-            typeChars.Add(registry.GetClassificationType("SembaParenthesisFormat"), new char[] { '(', ')' });
-            typeChars.Add(registry.GetClassificationType("SembaDelimiterFormat"), new char[] { ':', ';', ',' });
+            typeChars.Add(classificationTypeRegistryService.GetClassificationType("SembaBraceFormat"), new char[] { '{', '}' });
+            typeChars.Add(classificationTypeRegistryService.GetClassificationType("SembaBracketFormat"), new char[] { '[', ']' });
+            typeChars.Add(classificationTypeRegistryService.GetClassificationType("SembaParenthesisFormat"), new char[] { '(', ')' });
+            typeChars.Add(classificationTypeRegistryService.GetClassificationType("SembaDelimiterFormat"), new char[] { ':', ';', ',' });
         }
 
         private bool IsCharInType(char ch, IClassificationType ClassificationType)
@@ -26,22 +29,17 @@ namespace SembaVSHighlighter.SembaCharClassifier
             return false;
         }
 
-        public IList<ClassificationSpan> GetClassificationSpans(SnapshotSpan span)
+        protected override void AddClassifications(ICollection<ClassificationSpan> classifications, SnapshotSpan span)
         {
-            List<ClassificationSpan> classifications = new List<ClassificationSpan>();
-
             string line = span.GetText();
 
             for (int i = 0; i < line.Length; i++)
                 foreach (var ct in typeChars.Keys)
-                   if (IsCharInType(line[i], ct))
-                        classifications.Add(new ClassificationSpan(new SnapshotSpan(span.Snapshot, new Span(span.Start.Position + i, 1)), ct));
-
-            return classifications;
+                    if (IsCharInType(line[i], ct))
+                    {
+                        var classificationSpan = new ClassificationSpan(new SnapshotSpan(span.Snapshot, new Span(span.Start.Position + i, 1)), ct);
+                        AddToClassificationsIfNotInsideVerbatim(classificationSpan, classifications, span);
+                    }
         }
-
-        #pragma warning disable 67
-        public event EventHandler<ClassificationChangedEventArgs> ClassificationChanged;
-        #pragma warning restore 67
     }
 }

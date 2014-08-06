@@ -12,9 +12,12 @@ namespace SembaVSHighlighter.SembaCharClassifier
         [Import]
         internal IClassificationTypeRegistryService ClassificationRegistry = null;
 
+        [Import]
+        internal IClassifierAggregatorService ClassifierAggregatorService = null;
+
         public IClassifier GetClassifier(ITextBuffer buffer)
         {
-            return buffer.Properties.GetOrCreateSingletonProperty<SembaCharClassifier>(delegate { return new SembaCharClassifier(ClassificationRegistry); });
+            return buffer.Properties.GetOrCreateSingletonProperty<SembaCharClassifier>(delegate { return new SembaCharClassifier(ClassificationRegistry, ClassifierAggregatorService); });
         }
     }
 }

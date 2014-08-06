@@ -1,5 +1,6 @@
 ﻿Operator = Red
 String = Green
+String (C# @ Verbatim) = Green
 Comment = Gray
 Number = Navy
 Preprocessor Keyword = Olive
