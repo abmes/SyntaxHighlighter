@@ -8,3 +8,7 @@
     - URL: "http://semba.bg/vstools/atom.xml"
 
 3. Go to Tools -> Extensions and Updates -> Online -> Semba Extensions and install the extension
+
+4. Go to Tools -> Extensions and Updates -> Online -> Semba Extensions -> SembaVSHighlighter -> More Information to view the colors reference
+
+5. Go to Tools -> Options -> Environment -> Fonts and Colors to set the colors
