@@ -1,4 +1,6 @@
-﻿Operator = Red
+﻿SembaVSHighlighter Default Color Settings
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Operator = Red
 String = Green
 String (C# @ Verbatim) = Green
 Comment = Gray

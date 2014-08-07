@@ -3,7 +3,7 @@
   <Identifier Id="SembaVSHighlighter.Microsoft.faa55bea-71e5-4f40-9663-0d1ab1bd2a94">
     <Name>SembaVSHighlighter</Name>
     <Author>SEMBA</Author>
-    <Version>1.8</Version>
+    <Version>2.0.1</Version>
     <Description xml:space="preserve">Adds classification types for Brackets, Braces, Parentheses, Delimiters and Namespaces.</Description>
     <Locale>1033</Locale>
     <SupportedProducts>
