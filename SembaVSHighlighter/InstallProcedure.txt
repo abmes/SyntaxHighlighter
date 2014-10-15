@@ -5,7 +5,7 @@
   - go to "Tools -> Options -> Environment -> Extensions and Updates"
   - add Extension Gallery
     - Name: "Semba Extensions" 
-    - URL: "http://semba.bg/vstools/atom.xml"
+    - URL: "http://semba.bg/dev/vstools/atom.xml"
 
 3. Go to "Tools -> Extensions and Updates -> Online -> Semba Extensions" and install the extension
 
