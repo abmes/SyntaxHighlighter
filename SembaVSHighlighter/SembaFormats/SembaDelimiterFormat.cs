@@ -14,7 +14,7 @@ namespace SembaVSHighlighter.SembaFormats
     {
         public SembaDelimiterFormat()
         {
-            DisplayName = "C# Delimiter (Semba)";
+            DisplayName = "C#/JS/TS Delimiter (Semba)";
         }
     }
 }

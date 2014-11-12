@@ -7,6 +7,9 @@ namespace SembaVSHighlighter.SembaCharClassifier
 {
     [Export(typeof(IClassifierProvider))]
     [ContentType("CSharp")]
+    [ContentType("JScript")]
+    [ContentType("JavaScript")] // VS2012
+    [ContentType("TypeScript")]
     internal class SembaCharClassifierProvider : IClassifierProvider
     {
         [Import]

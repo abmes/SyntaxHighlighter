@@ -14,7 +14,7 @@ namespace SembaVSHighlighter.SembaFormats
     {
         public SembaBracketFormat()
         {
-            DisplayName = "C# Bracket (Semba)";
+            DisplayName = "C#/JS/TS Bracket (Semba)";
         }
     }
 }

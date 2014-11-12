@@ -14,7 +14,7 @@ namespace SembaVSHighlighter.SembaFormats
     {
         public SembaParenthesisFormat()
         {
-            DisplayName = "C# Parenthesis (Semba)";
+            DisplayName = "C#/JS/TS Parenthesis (Semba)";
         }
     }
 }
