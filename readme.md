@@ -2,10 +2,10 @@ Abmes.SyntaxHighlighter
 =======================
 
 This is a Visual Studio extension which adds the following classification types:
-- C#/JS/TS Delimiter - matches ':', ';' and ','
-- C#/JS/TS Parenthesis - matches '(' and ')'
-- C#/JS/TS Bracket - matches '[' and ']'
-- C#/JS/TS Brace - matches '{' and '}'
+- C#/JS/TS Delimiter - matches '**:**', '**;**' and '**,**'
+- C#/JS/TS Parenthesis - matches '**(**' and '**)**'
+- C#/JS/TS Bracket - matches '**[**' and '**]**'
+- C#/JS/TS Brace - matches '**{**' and '**}**'
 - C# Namespace - matches a C# namespace
 
 The above classification types can then be colored by going to Tools -> Options -> Fonts and Colors
