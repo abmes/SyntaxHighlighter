@@ -6,7 +6,7 @@
     <Version>2.0.5</Version>
     <Icon>icon.png</Icon>
     <License>license.txt</License>
-    <MoreInfoUrl>https://github.com/abmes/SyntaxHighlighter</MoreInfoUrl>
+    <MoreInfoUrl>https://github.com/abmes/SyntaxHighlighter#abmessyntaxhighlighter</MoreInfoUrl>
     <Description xml:space="preserve">Adds classification types for Brackets, Braces, Parentheses, Delimiters and Namespaces.</Description>
     <Locale>1033</Locale>
     <SupportedProducts>
