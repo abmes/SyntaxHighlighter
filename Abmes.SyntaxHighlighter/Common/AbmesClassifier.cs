@@ -6,16 +6,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SembaVSHighlighter.Common
+namespace Abmes.SyntaxHighlighter.Common
 {
-    abstract class SembaClassifier : IClassifier
+    abstract class AbmesClassifier : IClassifier
     {
         private bool _isAlreadyClassifying;
 
         private IClassificationTypeRegistryService _classificationTypeRegistry;
         protected IClassifierAggregatorService _classifierAggregatorService;
 
-        internal SembaClassifier(IClassificationTypeRegistryService classificationTypeRegistry, IClassifierAggregatorService classifierAggregatorService)
+        internal AbmesClassifier(IClassificationTypeRegistryService classificationTypeRegistry, IClassifierAggregatorService classifierAggregatorService)
         {
             _classificationTypeRegistry = classificationTypeRegistry;
             _classifierAggregatorService = classifierAggregatorService;

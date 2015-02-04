@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
-  <Identifier Id="SembaVSHighlighter.Microsoft.faa55bea-71e5-4f40-9663-0d1ab1bd2a94">
-    <Name>SembaVSHighlighter</Name>
-    <Author>SEMBA</Author>
-    <Version>2.0.4</Version>
-    <MoreInfoUrl>http://semba.bg/dev/vstools/VS2012/DefaultColors.txt</MoreInfoUrl>
+  <Identifier Id="Abmes.SyntaxHighlighter.Microsoft.faa55bea-71e5-4f40-9663-0d1ab1bd2a94">
+    <Name>Abmes.SyntaxHighlighter</Name>
+    <Author>Abmes</Author>
+    <Version>2.0.5</Version>
+    <MoreInfoUrl>http://DefaultColors.txt</MoreInfoUrl>
     <Description xml:space="preserve">Adds classification types for Brackets, Braces, Parentheses, Delimiters and Namespaces.</Description>
     <Locale>1033</Locale>
     <SupportedProducts>
@@ -13,6 +13,9 @@
       </VisualStudio>
       <VisualStudio Version="11.0">
         <Edition>Premium</Edition>
+      </VisualStudio>
+      <VisualStudio Version="12.0">
+        <Edition>Pro</Edition>
       </VisualStudio>
     </SupportedProducts>
     <SupportedFrameworkRuntimeEdition MinVersion="4.5" MaxVersion="4.5" />

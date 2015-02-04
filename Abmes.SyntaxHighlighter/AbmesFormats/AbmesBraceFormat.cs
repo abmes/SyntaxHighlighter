@@ -2,19 +2,19 @@
 using Microsoft.VisualStudio.Text.Classification;
 using Microsoft.VisualStudio.Utilities;
 
-namespace SembaVSHighlighter.SembaFormats
+namespace Abmes.SyntaxHighlighter.AbmesFormats
 {
     [Export(typeof(EditorFormatDefinition))]
-    [ClassificationType(ClassificationTypeNames = "SembaBraceFormat")]
-    [Name("SembaBraceFormat")]
+    [ClassificationType(ClassificationTypeNames = "AbmesBraceFormat")]
+    [Name("AbmesBraceFormat")]
     [UserVisible(true)]
     [Order(Before = "Comment")]
     [Order(Before = "String")]
-    internal sealed class SembaBraceFormat : ClassificationFormatDefinition
+    internal sealed class AbmesBraceFormat : ClassificationFormatDefinition
     {
-        public SembaBraceFormat()
+        public AbmesBraceFormat()
         {
-            DisplayName = "C#/JS/TS Brace (Semba)";
+            DisplayName = "C#/JS/TS Brace (Abmes)";
         }
     }
 }

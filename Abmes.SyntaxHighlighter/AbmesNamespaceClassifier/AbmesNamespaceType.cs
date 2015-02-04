@@ -7,12 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SembaVSHighlighter.SembaNamespaceClassifier
+namespace Abmes.SyntaxHighlighter.AbmesNamespaceClassifier
 {
-    internal static class SembaNamespaceTypes
+    internal static class AbmesNamespaceTypes
     {
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("SembaNamespaceFormat")]
-        internal static ClassificationTypeDefinition SembaNamespaceType = null;
+        [Name("AbmesNamespaceFormat")]
+        internal static ClassificationTypeDefinition AbmesNamespaceType = null;
     }
 }

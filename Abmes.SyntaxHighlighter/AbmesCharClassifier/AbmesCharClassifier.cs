@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.Text;
 using Microsoft.VisualStudio.Text.Classification;
-using SembaVSHighlighter.Common;
+using Abmes.SyntaxHighlighter.Common;
 
-namespace SembaVSHighlighter.SembaCharClassifier
+namespace Abmes.SyntaxHighlighter.AbmesCharClassifier
 {
-    class SembaCharClassifier : SembaClassifier
+    class AbmesCharClassifier : AbmesClassifier
     {
         Dictionary<IClassificationType, char[]> typeChars = new Dictionary<IClassificationType, char[]>();
 
-        internal SembaCharClassifier(IClassificationTypeRegistryService classificationTypeRegistryService, IClassifierAggregatorService classifierAggregatorService)
+        internal AbmesCharClassifier(IClassificationTypeRegistryService classificationTypeRegistryService, IClassifierAggregatorService classifierAggregatorService)
             : base(classificationTypeRegistryService, classifierAggregatorService)
         {
-            typeChars.Add(classificationTypeRegistryService.GetClassificationType("SembaBraceFormat"), new char[] { '{', '}' });
-            typeChars.Add(classificationTypeRegistryService.GetClassificationType("SembaBracketFormat"), new char[] { '[', ']' });
-            typeChars.Add(classificationTypeRegistryService.GetClassificationType("SembaParenthesisFormat"), new char[] { '(', ')' });
-            typeChars.Add(classificationTypeRegistryService.GetClassificationType("SembaDelimiterFormat"), new char[] { ':', ';', ',' });
+            typeChars.Add(classificationTypeRegistryService.GetClassificationType("AbmesBraceFormat"), new char[] { '{', '}' });
+            typeChars.Add(classificationTypeRegistryService.GetClassificationType("AbmesBracketFormat"), new char[] { '[', ']' });
+            typeChars.Add(classificationTypeRegistryService.GetClassificationType("AbmesParenthesisFormat"), new char[] { '(', ')' });
+            typeChars.Add(classificationTypeRegistryService.GetClassificationType("AbmesDelimiterFormat"), new char[] { ':', ';', ',' });
         }
 
         private bool IsCharInType(char ch, IClassificationType ClassificationType)

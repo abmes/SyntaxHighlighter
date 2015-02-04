@@ -7,20 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SembaVSHighlighter.SembaFormats
+namespace Abmes.SyntaxHighlighter.AbmesFormats
 {
     [Export(typeof(EditorFormatDefinition))]
-    [ClassificationType(ClassificationTypeNames = "SembaNamespaceFormat")]
-    [Name("SembaNamespaceFormat")]
+    [ClassificationType(ClassificationTypeNames = "AbmesNamespaceFormat")]
+    [Name("AbmesNamespaceFormat")]
     [UserVisible(true)]
     [Order(Before = "Comment")]
     [Order(Before = "String")]
     [Order(After = "User Types")]
-    internal sealed class SembaNamespaceFormat : ClassificationFormatDefinition
+    internal sealed class AbmesNamespaceFormat : ClassificationFormatDefinition
     {
-        public SembaNamespaceFormat()
+        public AbmesNamespaceFormat()
         {
-            DisplayName = "C# Namespace (Semba)";
+            DisplayName = "C# Namespace (Abmes)";
         }
     }
 }

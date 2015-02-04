@@ -8,11 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SembaVSHighlighter.SembaNamespaceClassifier
+namespace Abmes.SyntaxHighlighter.AbmesNamespaceClassifier
 {
     [Export(typeof(IClassifierProvider))]
     [ContentType("CSharp")]
-    internal class SembaNamespaceClassifierProvider : IClassifierProvider
+    internal class AbmesNamespaceClassifierProvider : IClassifierProvider
     {
         [Import]
         internal IClassificationTypeRegistryService ClassificationRegistry = null;
@@ -22,7 +22,7 @@ namespace SembaVSHighlighter.SembaNamespaceClassifier
 
         public IClassifier GetClassifier(ITextBuffer buffer)
         {
-            return buffer.Properties.GetOrCreateSingletonProperty<SembaNamespaceClassifier>(delegate { return new SembaNamespaceClassifier(ClassificationRegistry, ClassifierAggregatorService); });
+            return buffer.Properties.GetOrCreateSingletonProperty<AbmesNamespaceClassifier>(delegate { return new AbmesNamespaceClassifier(ClassificationRegistry, ClassifierAggregatorService); });
         }
     }
 }

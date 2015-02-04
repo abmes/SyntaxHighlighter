@@ -3,14 +3,14 @@ using Microsoft.VisualStudio.Text.Classification;
 using Microsoft.VisualStudio.Utilities;
 using System.ComponentModel.Composition;
 
-namespace SembaVSHighlighter.SembaCharClassifier
+namespace Abmes.SyntaxHighlighter.AbmesCharClassifier
 {
     [Export(typeof(IClassifierProvider))]
     [ContentType("CSharp")]
     [ContentType("JScript")]
     [ContentType("JavaScript")] // VS2012
     [ContentType("TypeScript")]
-    internal class SembaCharClassifierProvider : IClassifierProvider
+    internal class AbmesCharClassifierProvider : IClassifierProvider
     {
         [Import]
         internal IClassificationTypeRegistryService ClassificationRegistry = null;
@@ -20,7 +20,7 @@ namespace SembaVSHighlighter.SembaCharClassifier
 
         public IClassifier GetClassifier(ITextBuffer buffer)
         {
-            return buffer.Properties.GetOrCreateSingletonProperty<SembaCharClassifier>(delegate { return new SembaCharClassifier(ClassificationRegistry, ClassifierAggregatorService); });
+            return buffer.Properties.GetOrCreateSingletonProperty<AbmesCharClassifier>(delegate { return new AbmesCharClassifier(ClassificationRegistry, ClassifierAggregatorService); });
         }
     }
 }

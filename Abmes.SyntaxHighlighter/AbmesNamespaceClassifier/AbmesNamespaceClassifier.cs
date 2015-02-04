@@ -7,19 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.CodeDom;
-using SembaVSHighlighter.Common;
+using Abmes.SyntaxHighlighter.Common;
 
-namespace SembaVSHighlighter.SembaNamespaceClassifier
+namespace Abmes.SyntaxHighlighter.AbmesNamespaceClassifier
 {
-    class SembaNamespaceClassifier : SembaClassifier
+    class AbmesNamespaceClassifier : AbmesClassifier
     {
-        private readonly IClassificationType SembaNamespaceClassificationType;
+        private readonly IClassificationType AbmesNamespaceClassificationType;
         private readonly char[] DelimiterChars;
 
-        internal SembaNamespaceClassifier(IClassificationTypeRegistryService classificationTypeRegistryService, IClassifierAggregatorService classifierAggregatorService)
+        internal AbmesNamespaceClassifier(IClassificationTypeRegistryService classificationTypeRegistryService, IClassifierAggregatorService classifierAggregatorService)
             : base (classificationTypeRegistryService, classifierAggregatorService)
         {
-            SembaNamespaceClassificationType = classificationTypeRegistryService.GetClassificationType("SembaNamespaceFormat");
+            AbmesNamespaceClassificationType = classificationTypeRegistryService.GetClassificationType("AbmesNamespaceFormat");
             DelimiterChars = GetDelimiterChars();
         }
 
@@ -82,7 +82,7 @@ namespace SembaVSHighlighter.SembaNamespaceClassifier
                     while (namespaceStartIndex < line.Length)
                     {
                         int namespaceEndIndex = GetNextDelimiterIndex(line, namespaceStartIndex);
-                        var classificationSpan = GetClassificationSpan(span, namespaceStartIndex, namespaceEndIndex - namespaceStartIndex, SembaNamespaceClassificationType); 
+                        var classificationSpan = GetClassificationSpan(span, namespaceStartIndex, namespaceEndIndex - namespaceStartIndex, AbmesNamespaceClassificationType); 
                         AddToClassificationsIfNotInsideVerbatim(classificationSpan, classifications, span);
                         namespaceStartIndex = GetNextIdentifierIndex(line, namespaceEndIndex);
                     }
@@ -112,7 +112,7 @@ namespace SembaVSHighlighter.SembaNamespaceClassifier
                     while ((prevDelimiterIndex >= 0) && (line[prevDelimiterIndex] == '.'))
                     {
                         int nextDelimiterIndex = line.LastIndexOfAny(DelimiterChars, prevDelimiterIndex - 1);
-                        var namespaceClassificationSpan = GetClassificationSpan(span, nextDelimiterIndex + 1, prevDelimiterIndex - nextDelimiterIndex - 1, SembaNamespaceClassificationType);
+                        var namespaceClassificationSpan = GetClassificationSpan(span, nextDelimiterIndex + 1, prevDelimiterIndex - nextDelimiterIndex - 1, AbmesNamespaceClassificationType);
                         AddToClassificationsIfNotInsideVerbatim(namespaceClassificationSpan, classifications, span);
                         prevDelimiterIndex = nextDelimiterIndex;
                     }
