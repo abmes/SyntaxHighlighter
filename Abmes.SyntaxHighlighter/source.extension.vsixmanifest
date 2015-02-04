@@ -4,7 +4,7 @@
     <Name>Abmes.SyntaxHighlighter</Name>
     <Author>Abmes</Author>
     <Version>2.0.5</Version>
-    <MoreInfoUrl>http://DefaultColors.txt</MoreInfoUrl>
+    <MoreInfoUrl>https://github.com/abmes/SyntaxHighlighter</MoreInfoUrl>
     <Description xml:space="preserve">Adds classification types for Brackets, Braces, Parentheses, Delimiters and Namespaces.</Description>
     <Locale>1033</Locale>
     <SupportedProducts>
