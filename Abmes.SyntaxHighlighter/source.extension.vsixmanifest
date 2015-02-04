@@ -1,9 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
   <Identifier Id="Abmes.SyntaxHighlighter.Microsoft.faa55bea-71e5-4f40-9663-0d1ab1bd2a94">
-    <Name>Abmes.SyntaxHighlighter</Name>
+    <Name>Abmes SyntaxHighlighter</Name>
     <Author>Abmes</Author>
     <Version>2.0.5</Version>
+    <Icon>icon.png</Icon>
+    <License>license.txt</License>
     <MoreInfoUrl>https://github.com/abmes/SyntaxHighlighter</MoreInfoUrl>
     <Description xml:space="preserve">Adds classification types for Brackets, Braces, Parentheses, Delimiters and Namespaces.</Description>
     <Locale>1033</Locale>
