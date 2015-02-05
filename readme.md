@@ -12,14 +12,13 @@ The above classification types can then be colored by going to Tools -> Options 
 
 Installation
 ------------
-You can get the latest release from the Visual Studio Gallery. Go to Tools -> Extensions and Updates -> Online -> Visual Studio Gallery and search for Abmes.SyntaxHighlighter
+You can get the latest release from the Visual Studio Gallery. Go to Tools -> Extensions and Updates -> Online -> Visual Studio Gallery and search for Abmes SyntaxHighlighter
 
 Compatible Visual Studio Versions
 ---------------------------------
 Currently this extension has been tested on:
-* Visual Studio 2012 Ultimate
-* Visual Studio 2012 Premium
-* Visual Studio 2013 Professional
+* Visual Studio 2012
+* Visual Studio 2013
 
 Recommended Colors
 ------------------

@@ -3,7 +3,7 @@
   <Identifier Id="Abmes.SyntaxHighlighter.Microsoft.faa55bea-71e5-4f40-9663-0d1ab1bd2a94">
     <Name>Abmes SyntaxHighlighter</Name>
     <Author>Abmes</Author>
-    <Version>2.0.5</Version>
+    <Version>2.0.8</Version>
     <Icon>icon.png</Icon>
     <License>license.txt</License>
     <MoreInfoUrl>https://github.com/abmes/SyntaxHighlighter#abmessyntaxhighlighter</MoreInfoUrl>
@@ -11,10 +11,7 @@
     <Locale>1033</Locale>
     <SupportedProducts>
       <VisualStudio Version="11.0">
-        <Edition>Ultimate</Edition>
-      </VisualStudio>
-      <VisualStudio Version="11.0">
-        <Edition>Premium</Edition>
+        <Edition>Pro</Edition>
       </VisualStudio>
       <VisualStudio Version="12.0">
         <Edition>Pro</Edition>
