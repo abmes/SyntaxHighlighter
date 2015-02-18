@@ -29,8 +29,8 @@ Recommended Colors
 - XML Doc Comment = Silver
 - Number = Navy
 - Preprocessor Keyword = Olive
+- C# Namespace (Abmes) = R: 120, G: 10, B: 170
 - C#/JS/TS Brace (Abmes) = Blue
 - C#/JS/TS Bracket (Abmes) = Red
-- C#/JS/TS Parentheses (Abmes) = Red
 - C#/JS/TS Delimiter (Abmes) = Red
-- C# Namespace (Abmes) = R: 120, G: 10, B: 170
+- C#/JS/TS Parentheses (Abmes) = Red
