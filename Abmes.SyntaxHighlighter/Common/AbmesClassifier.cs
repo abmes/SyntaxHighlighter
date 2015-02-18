@@ -10,7 +10,7 @@ namespace Abmes.SyntaxHighlighter.Common
 {
     abstract class AbmesClassifier : IClassifier
     {
-        private bool _isAlreadyClassifying;
+        private static bool _isAlreadyClassifying;
 
         private IClassificationTypeRegistryService _classificationTypeRegistry;
         protected IClassifierAggregatorService _classifierAggregatorService;

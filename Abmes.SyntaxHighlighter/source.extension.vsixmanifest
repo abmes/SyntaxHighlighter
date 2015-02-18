@@ -3,7 +3,7 @@
   <Identifier Id="Abmes.SyntaxHighlighter.Microsoft.faa55bea-71e5-4f40-9663-0d1ab1bd2a94">
     <Name>Abmes SyntaxHighlighter</Name>
     <Author>Abmes</Author>
-    <Version>2.0.8</Version>
+    <Version>2.0.9</Version>
     <Icon>icon.png</Icon>
     <License>license.txt</License>
     <MoreInfoUrl>https://github.com/abmes/SyntaxHighlighter#abmessyntaxhighlighter</MoreInfoUrl>
