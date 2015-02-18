@@ -1,5 +1,6 @@
 Abmes.SyntaxHighlighter
 =======================
+[![Build status](https://ci.appveyor.com/api/projects/status/bdm9l3rwyhlt477w?svg=true)](https://ci.appveyor.com/project/abmes/syntaxhighlighter)
 
 This is a Visual Studio extension which adds the following classification types:
 - C#/JS/TS Delimiter - matches '**:**', '**;**' and '**,**'
