@@ -35,3 +35,18 @@ Recommended Colors
 - C#/JS/TS Bracket (Abmes) = Red
 - C#/JS/TS Delimiter (Abmes) = Red
 - C#/JS/TS Parentheses (Abmes) = Red
+
+Recommended colors for "Breakpoint", "Breakpoint - Mapped" and "Breakpoint - Advanced"
+--------------------------------------------------------------------------------------
+Breakpoint (Disabled) - Foreground = R: 231, G: 190, B: 196
+
+Breakpoint (Enabled) - Foreground = Automatic
+Breakpoint (Enabled) - Background = R: 231, G: 190, B: 196
+
+Breakpoint (Error) - Foreground = Red
+Breakpoint (Error) - Background = R: 231, G: 190, B: 196
+
+Breakpoint (Scroll Bar) - Background = R: 231, G: 190, B: 196
+
+Breakpoint (Warning) - Foreground = Automatic
+Breakpoint (Warning) - Background = R: 231, G: 190, B: 196
