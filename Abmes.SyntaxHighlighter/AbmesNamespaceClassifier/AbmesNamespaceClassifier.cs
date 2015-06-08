@@ -15,6 +15,28 @@ namespace Abmes.SyntaxHighlighter.AbmesNamespaceClassifier
     {
         private readonly IClassificationType AbmesNamespaceClassificationType;
         private readonly char[] DelimiterChars;
+        
+        private readonly string[] preVS2015ClassificationTypeNames = new[]
+        {
+            "User Types",
+            "User Types(Delegates)",
+            "User Types(Enums)",
+            "User Types(Interfaces)",
+            "User Types(Type parameters)",
+            "User Types(Value types)"
+        };
+
+        // names taken from http://source.roslyn.codeplex.com/#Microsoft.CodeAnalysis.Workspaces/Classification/ClassificationTypeNames.cs,0d32b01fc1864a29
+        private readonly string[] vs2015ClassificationTypeNames = new[]
+        {
+            "class name",
+            "delegate name",
+            "enum name",
+            "interface name",
+            "module name",
+            "struct name",
+            "type parameter name"
+        };
 
         internal AbmesNamespaceClassifier(IClassificationTypeRegistryService classificationTypeRegistryService, IClassifierAggregatorService classifierAggregatorService)
             : base (classificationTypeRegistryService, classifierAggregatorService)
@@ -89,7 +111,7 @@ namespace Abmes.SyntaxHighlighter.AbmesNamespaceClassifier
                 }
             }
         }
-        
+
         private void AddNamespaceBeforeTypeClassificationSpans(ICollection<ClassificationSpan> classifications, SnapshotSpan span)
         {
             string line = span.GetText();
@@ -97,13 +119,8 @@ namespace Abmes.SyntaxHighlighter.AbmesNamespaceClassifier
             var classifier = _classifierAggregatorService.GetClassifier(span.Snapshot.TextBuffer);
             foreach (var classificationSpan in classifier.GetClassificationSpans(span))
             {
-                if (classificationSpan.ClassificationType.IsOfType("User Types") ||
-                    classificationSpan.ClassificationType.IsOfType("User Types(Delegates)") ||
-                    classificationSpan.ClassificationType.IsOfType("User Types(Enums)") ||
-                    classificationSpan.ClassificationType.IsOfType("User Types(Interfaces)") ||
-                    classificationSpan.ClassificationType.IsOfType("User Types(Type parameters)") ||
-                    classificationSpan.ClassificationType.IsOfType("User Types(Value types)")
-                   )
+                if (preVS2015ClassificationTypeNames.Any(x => classificationSpan.ClassificationType.IsOfType(x)) ||
+                    vs2015ClassificationTypeNames.Any(x => classificationSpan.ClassificationType.Classification.Contains(x)))
                 {
                     int userTypeStart = classificationSpan.Span.Start - span.Start;
 

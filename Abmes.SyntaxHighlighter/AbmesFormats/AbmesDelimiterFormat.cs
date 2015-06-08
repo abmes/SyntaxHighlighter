@@ -10,6 +10,7 @@ namespace Abmes.SyntaxHighlighter.AbmesFormats
     [UserVisible(true)]
     [Order(Before = "Comment")]
     [Order(Before = "String")]
+    [Order(After = "Punctuation")]
     internal sealed class AbmesDelimiterFormat : ClassificationFormatDefinition
     {
         public AbmesDelimiterFormat()

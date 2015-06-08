@@ -20,21 +20,33 @@ Compatible Visual Studio Versions
 Currently this extension has been tested on:
 * Visual Studio 2012
 * Visual Studio 2013
+* Visual Studio 2015 RC
 
 Recommended Colors
 ------------------
 - Operator = Red
 - String = Green
-- String (C# @ Verbatim) = Green
 - Comment = Gray
 - XML Doc Comment = Silver
 - Number = Navy
 - Preprocessor Keyword = Olive
 - C# Namespace (Abmes) = R: 120, G: 10, B: 170
 - C#/JS/TS Brace (Abmes) = Blue
+
+Recommended Colors specific for VS 2012 and VS 2013
+---------------------------------------------------
+- String (C# @ Verbatim) = Green
 - C#/JS/TS Bracket (Abmes) = Red
 - C#/JS/TS Delimiter (Abmes) = Red
 - C#/JS/TS Parentheses (Abmes) = Red
+
+Recommended Colors specifig for VS 2015 RC
+------------------------------------------
+- String - Verbatim = Green
+- Punctuation = Red
+- C#/JS/TS Bracket (Abmes) = Default
+- C#/JS/TS Delimiter (Abmes) = Default
+- C#/JS/TS Parentheses (Abmes) = Default
 
 Other recommended colors
 ------------------------

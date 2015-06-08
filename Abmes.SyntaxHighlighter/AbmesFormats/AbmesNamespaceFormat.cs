@@ -16,6 +16,7 @@ namespace Abmes.SyntaxHighlighter.AbmesFormats
     [Order(Before = "Comment")]
     [Order(Before = "String")]
     [Order(After = "User Types")]
+    [Order(After = "Identifier")]
     internal sealed class AbmesNamespaceFormat : ClassificationFormatDefinition
     {
         public AbmesNamespaceFormat()
