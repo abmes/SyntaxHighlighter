@@ -40,7 +40,7 @@ Colors specific for VS 2012 and VS 2013
 - C#/JS/TS Delimiter (Abmes) = Red
 - C#/JS/TS Parentheses (Abmes) = Red
 
-Colors specifig for VS 2015 RC
+Colors specific for VS 2015 RC
 ------------------------------
 - String - Verbatim = Green
 - Punctuation = Red
