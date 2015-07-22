@@ -17,10 +17,10 @@ You can get the latest release from the Visual Studio Gallery. Go to Tools -> Ex
 
 Compatible Visual Studio Versions
 ---------------------------------
-Currently this extension has been tested on:
-* Visual Studio 2012
+Currently this extension is supported on:
+* Visual Studio 2012 (unofficial)
 * Visual Studio 2013
-* Visual Studio 2015 RC
+* Visual Studio 2015
 
 Recommended Colors
 ------------------
@@ -33,14 +33,14 @@ Recommended Colors
 - C# Namespace (Abmes) = R: 120, G: 10, B: 170
 - C#/JS/TS Brace (Abmes) = Blue
 
-Colors specific for VS 2012 and VS 2013
+Colors specific for VS 2013
 ---------------------------------------
 - String (C# @ Verbatim) = Green
 - C#/JS/TS Bracket (Abmes) = Red
 - C#/JS/TS Delimiter (Abmes) = Red
 - C#/JS/TS Parentheses (Abmes) = Red
 
-Colors specific for VS 2015 RC
+Colors specific for VS 2015
 ------------------------------
 - String - Verbatim = Green
 - Punctuation = Red
