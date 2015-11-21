@@ -1,0 +1,6 @@
+https://www.google.bg/search?q=GetClassificationSpans+returns+empty&ie=&oe=
+http://stackoverflow.com/questions/33587744/getclassificationspans-in-visual-studio-2015-doesnt-return-anything
+https://connect.microsoft.com/VisualStudio/feedback/details/1694373/getclassificationspans-method-does-not-work-in-vs-2015
+
+
+In your scenario, the best thing for you to do would be to create a TagAggregator (see IViewTagAggregatorFactoryService) for IClassificationTags. Creating the tagger will force the classifiers to be created immediately and you can use ITagAggregator<IClassificationTags>.GetTags() to get the classifications on the text you are interested in.
