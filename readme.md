@@ -33,6 +33,9 @@ Recommended Colors
 - Preprocessor Keyword = Olive
 - C# Namespace (Abmes) = R: 120, G: 10, B: 170
 - C#/JS/TS Brace (Abmes) = Blue
+- HTML Razor Code Background = Automatic
+- HTML Server-Side Script - Background = Automatic
+- HTML Server-Side Script - Foreground = Purple
 
 Colors specific for VS 2013
 ---------------------------------------
