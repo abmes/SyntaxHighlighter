@@ -27,7 +27,7 @@ Currently this extension is supported on:
 Recommended Colors
 ------------------
 - Operator = Red
-- User Types - Interfaces = R: 0, G: 180, B: 220
+- User Types - Interfaces = R: 0, G: 128, B: 255
 - String = Green
 - Comment = Gray
 - XML Doc Comment = Silver
