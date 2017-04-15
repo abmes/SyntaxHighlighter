@@ -21,7 +21,7 @@ Currently this extension is supported on:
 * Visual Studio 2012 (unofficial)
 * Visual Studio 2013
 * Visual Studio 2015
-* Visual Studio 2017 - currently *not* supported.
+* Visual Studio 2017 - Currently **not supported**.
   A workaround would be using the "Punctuation" element which combines the delimiters and the braces, brackets, etc. and for the namespace you can use the [Semantic Syntax Colorizer](https://github.com/hicknhack-software/semantic-colorizer) which works with VS 2017 and uses the Roslyn API so I expect it to be more accurate.
 
 Recommended Colors
