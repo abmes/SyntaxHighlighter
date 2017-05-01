@@ -1,4 +1,4 @@
-Abmes.SyntaxHighlighter
+Abmes.SyntaxHighlighter -> [Semantic Highlighter](https://github.com/abmes/SemanticHighlighter)
 =======================
 [![Build status](https://ci.appveyor.com/api/projects/status/bdm9l3rwyhlt477w?svg=true)](https://ci.appveyor.com/project/abmes/syntaxhighlighter)
 
@@ -11,6 +11,7 @@ This is a Visual Studio extension which adds the following classification types:
 
 The above classification types can then be colored by going to Tools -> Options -> Fonts and Colors
 
+
 Installation
 ------------
 You can get the latest release from the Visual Studio Gallery. Go to Tools -> Extensions and Updates -> Online -> Visual Studio Gallery and search for Abmes SyntaxHighlighter
@@ -21,8 +22,12 @@ Currently this extension is supported on:
 * Visual Studio 2012 (unofficial)
 * Visual Studio 2013
 * Visual Studio 2015
-* Visual Studio 2017 - Currently **not supported**.
-  A workaround would be using the "Punctuation" element which combines the delimiters and the braces, brackets, etc. and for the namespace you can use the [Semantic Syntax Colorizer](https://github.com/hicknhack-software/semantic-colorizer) which works with VS 2017 and uses the Roslyn API so I expect it to be more accurate.
+* Visual Studio 2017 - **not supported**.
+  For VS2017 please use the new [Semantic Highlighter](https://github.com/abmes/SemanticHighlighter)
+
+New Versions
+------------
+This extension will not be developed any further. For new versions please use the new [Semantic Highlighter](https://github.com/abmes/SemanticHighlighter) which uses the Roslyn API and is much more accurate and robust.
 
 Recommended Colors
 ------------------
